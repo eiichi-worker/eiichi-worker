@@ -7,6 +7,14 @@
   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=eiichi-worker" />
 </a>
 
+### お仕事
+
+- [合同会社わしら](https://washira.co/)
+- [ノラネコ技術工房(個人事業)](https://noraneko.tech/) 
+
+### もっと詳しく
+[Eiichi Fujimoto | eiichi-worker.github.io](https://eiichi-worker.github.io/)
+
 #### 応援する
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/M4M351104)
