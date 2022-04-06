@@ -13,7 +13,7 @@
 - [ノラネコ技術工房(個人事業)](https://noraneko.tech/) 
 
 ### もっと詳しく
-[Eiichi Fujimoto | eiichi-worker.github.io](https://eiichi-worker.github.io/)
+[Eiichi Fujimoto | eiichi-worker.github.io](https://github.com/eiichi-worker/eiichi-worker.github.io/blob/main/README.md)
 
 #### 応援する
 
