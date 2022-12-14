@@ -7,6 +7,9 @@
   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=eiichi-worker" />
 </a>
 
+<!--START_SECTION:lapras-card-->
+<!--END_SECTION:lapras-card-->
+
 ### お仕事
 
 - [合同会社わしら](https://washira.co/)
