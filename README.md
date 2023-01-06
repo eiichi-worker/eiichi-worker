@@ -8,8 +8,8 @@
 </a>
 
 <!--START_SECTION:lapras-card-->
-<a href="https://lapras.com/public/eiichi" target="_blank" rel="noopener noreferrer"><img src="https://lapras-card-generator.vercel.app/api/svg?e=3.17&b=2.85&i=3.19&b1=%23ff7b00&b2=%23ffcead&i1=%23fea743&i2=%23fed6a9&l=ja" width="400" ></a>  
-Last Updated on 1/5/2023, 12:04:40 AM
+<a href="https://lapras.com/public/eiichi" target="_blank" rel="noopener noreferrer"><img src="https://lapras-card-generator.vercel.app/api/svg?e=3.21&b=2.85&i=3.19&b1=%23ff7b00&b2=%23ffcead&i1=%23fea743&i2=%23fed6a9&l=ja" width="400" ></a>  
+Last Updated on 1/6/2023, 12:04:50 AM
 <!--END_SECTION:lapras-card-->
 
 ### お仕事
