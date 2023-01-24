@@ -15,7 +15,6 @@ Last Updated on 1/24/2023, 12:04:29 AM
 ### お仕事
 
 - [合同会社わしら](https://washira.co/)
-- [ノラネコ技術工房(個人事業)](https://noraneko.tech/) 
 
 ### もっと詳しく
 [Eiichi Fujimoto | eiichi-worker.github.io](https://github.com/eiichi-worker/eiichi-worker.github.io/blob/main/README.md)
