@@ -17,7 +17,7 @@ Last Updated on 1/25/2023, 12:04:18 AM
 - [合同会社わしら](https://washira.co/)
 
 ### もっと詳しく
-[Eiichi Fujimoto | eiichi-worker.github.io](https://github.com/eiichi-worker/eiichi-worker.github.io/blob/main/README.md){:target="_blank"}
+[Eiichi Fujimoto | eiichi-worker.github.io](https://github.com/eiichi-worker/eiichi-worker.github.io/blob/main/README.md)
 
 #### 応援する
 
