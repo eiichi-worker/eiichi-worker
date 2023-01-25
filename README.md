@@ -21,4 +21,4 @@ Last Updated on 1/25/2023, 12:04:18 AM
 
 #### 応援する
 
-[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/M4M351104)
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/M4M351104){:target="_blank"}
