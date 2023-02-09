@@ -1,5 +1,7 @@
 ### Eiichi Fujimoto
 
+[![wakatime](https://wakatime.com/badge/user/c7ac5d98-f2b4-4c67-a5a5-8fd929645b8b.svg)](https://wakatime.com/@c7ac5d98-f2b4-4c67-a5a5-8fd929645b8b)
+
 <a href="https://github.com/anuraghazra/github-readme-stats">
   <img align="left" src="https://github-readme-stats.vercel.app/api?username=eiichi-worker&count_private=true&show_icons=true" />
 </a>
