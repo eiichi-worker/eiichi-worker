@@ -14,9 +14,15 @@
 Last Updated on 3/14/2023, 12:04:42 AM
 <!--END_SECTION:lapras-card-->
 
-### お仕事
+### お仕事のご依頼
 
+直接の場合はサイトのフォームよりご連絡ください。
 - [合同会社わしら](https://washira.co/)
+
+プラットフォーム経由の場合はこちら
+
+- [クラウドワークス](https://crowdworks.jp/public/employees/4831032)
+- [複業クラウド 登録済み](https://talent.aw-anotherworks.com/)
 
 ### もっと詳しく
 
