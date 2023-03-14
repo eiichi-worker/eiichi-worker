@@ -19,7 +19,12 @@ Last Updated on 3/14/2023, 12:04:42 AM
 - [合同会社わしら](https://washira.co/)
 
 ### もっと詳しく
-[Eiichi Fujimoto | eiichi-worker.github.io](https://eiichi-worker.github.io)
+
+下記サイトにスキルや職務経歴、アウトプットなどまとまってます。
+
+- [LAPRAS Profile](https://lapras.com/public/eiichi)
+- [Findy](https://findy-code.io/share_profiles/NRibtwc_NCL_7)
+- [Eiichi Fujimoto | eiichi-worker.github.io](https://eiichi-worker.github.io)
 
 #### 応援する
 
