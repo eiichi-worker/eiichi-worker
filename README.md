@@ -59,7 +59,7 @@ HRT(謙虚/敬意/信頼)の心を大事にアジャイルに働くよ。
 下記サイトにスキルや職務経歴、アウトプットなどまとまってます。
 
 - [LAPRAS Profile](https://lapras.com/public/eiichi) ← ✨ おすすめ
-- [Findy](https://findy-code.io/share_profiles/NRibtwc_NCL_7)
+- [Findy](https://findy-code.io/share_profiles/NRibtwc_NCL_7) ← 職務経歴はこちらが見やすい
 - [Eiichi Fujimoto | eiichi-worker.github.io](https://eiichi-worker.github.io)
 
 👍 応援する
