@@ -80,5 +80,5 @@ HRT(謙虚/敬意/信頼)の心を大事にアジャイルに働くよ。
 
 <!--START_SECTION:lapras-card-->
 <a href="https://lapras.com/public/eiichi" target="_blank" rel="noopener noreferrer"><img src="https://lapras-card-generator.vercel.app/api/svg?e=3.22&b=3.48&i=3.2&b1=%23ff7b00&b2=%23ffcead&i1=%23fea743&i2=%23fed6a9&l=ja" width="400" ></a>  
-Last Updated on 5/4/2023, 12:04:24 AM
+Last Updated on 5/5/2023, 12:04:07 AM
 <!--END_SECTION:lapras-card-->
