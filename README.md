@@ -81,6 +81,6 @@ HRT(謙虚/敬意/信頼)の心を大事にアジャイルに働くよ。
 </a>
 
 <!--START_SECTION:lapras-card-->
-<a href="https://lapras.com/public/eiichi" target="_blank" rel="noopener noreferrer"><img src="https://lapras-card-generator.vercel.app/api/svg?e=3.31&b=3.48&i=3.19&b1=%23ff7b00&b2=%23ffcead&i1=%23fea743&i2=%23fed6a9&l=ja" width="400" ></a>  
-Last Updated on 7/7/2023, 12:05:27 AM
+<a href="https://lapras.com/public/eiichi" target="_blank" rel="noopener noreferrer"><img  alt="eiichiのLAPRASでのスコアは次の通りです: エンジニアリング: 3.31 / 5.0, ビジネス: 3.48 / 5.0, インフルエンス: 3.19 / 5.0." src="https://lapras-card-generator.vercel.app/api/svg?e=3.31&b=3.48&i=3.19&b1=%23ff7b00&b2=%23ffcead&i1=%23fea743&i2=%23fed6a9&l=ja" width="400" ></a>  
+Last Updated on 7/8/2023, 12:05:14 AM
 <!--END_SECTION:lapras-card-->
