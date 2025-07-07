@@ -4,7 +4,6 @@
 [![wakatime](https://wakatime.com/badge/user/c7ac5d98-f2b4-4c67-a5a5-8fd929645b8b.svg)](https://wakatime.com/@c7ac5d98-f2b4-4c67-a5a5-8fd929645b8b)
 ![](https://komarev.com/ghpvc/?username=eiichi-worker)
 
-[📄 職務経歴書はこちら](./RESUME.md)
 
 🤗 こんにちは
 ---
@@ -19,10 +18,21 @@ HRT(謙虚/敬意/信頼)の心を大事にアジャイルに働くよ。
 <https://washira.co>  
 お仕事も募集中だよ🧡
 
+### 😎 趣味・興味
+
+- モダンな技術あさり
+- 自作PC、ガジェット
+- ゲーム
+- 猫、水槽
+- アニメ
+- ディストピア飯
+
 🧑‍💻 職歴やスキルは職務経歴書にまとめてあるよ
 ---
 
-[📄 職務経歴書はこちら](./RESUME.md)
+職歴やスキルは職務経歴書にまとめてあるよ📝
+
+- [📄 職務経歴書はこちら](./RESUME.md)
 
 ### 💪 言語やツール
 
