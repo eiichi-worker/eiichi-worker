@@ -16,14 +16,20 @@ HRT(謙虚/敬意/信頼)の心を大事にアジャイルに働くよ。
 
 #### 【合同会社わしら】の代表兼エンジニアをしているよ。
 
-<https://washira.co>  
-お仕事も募集中だよ🧡
+- コーポレートサイトだよ👇  
+  - <https://washira.co>  
+- 雑に会社の情報を書きためる場所だよ
+  - [合同会社わしら｜Cosense(旧Scrapbox)](https://scrapbox.io/washira/)  
+
+会社への依頼も個人への依頼も募集中だよ🧡
+
 
 #### 保護猫系ボランティアもしているよ🐱
 
 応援してね📣  
 \もあねこプロジェクト/  
-<https://lit.link/moreneko>
+<https://lit.link/moreneko>  
+👆 SNS頑張り中 👆
 
 #### 😎 趣味・興味
 
@@ -50,7 +56,7 @@ HRT(謙虚/敬意/信頼)の心を大事にアジャイルに働くよ。
 #### プラットフォーム経由の場合はこちら
 
 - [クラウドワークス](https://crowdworks.jp/public/employees/4831032)
-- [複業クラウド](https://talent.aw-anotherworks.com/) / 登録済み
+- [ココナラ](https://coconala.com/users/3611835)
 
 🔍 もっと詳しく
 ---
@@ -62,7 +68,8 @@ HRT(謙虚/敬意/信頼)の心を大事にアジャイルに働くよ。
 
 - [Facebook](https://www.facebook.com/eiichi.fujimoto)
 - [LinkedIn](https://www.linkedin.com/in/eiichi-fujimoto)
-- [Note](https://note.com/eiichicat)
+- [eight｜名刺](https://8card.net/virtual_cards/aTbPCzDpFnjX3D0zwY5rqQ)
+- [Note｜ブログ](https://note.com/eiichicat)
 
 📊 その他情報
 ---
