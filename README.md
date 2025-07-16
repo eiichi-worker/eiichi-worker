@@ -58,9 +58,10 @@ HRT(謙虚/敬意/信頼)の心を大事にアジャイルに働くよ。
 - [クラウドワークス](https://crowdworks.jp/public/employees/4831032)
 - [ココナラ](https://coconala.com/users/3611835)
 
-🔍 もっと詳しく
+🔍 利用サービス/プロフィールなど
 ---
 
+- [Connpass](https://connpass.com/user/eiichi/)
 - [LAPRAS Profile](https://lapras.com/public/eiichi) 
 
 🌏 SNS
