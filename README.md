@@ -1,12 +1,9 @@
-藤本 永一（Eiichi Fujimoto）
-===
+# 藤本 永一（Eiichi Fujimoto）
 
 [![wakatime](https://wakatime.com/badge/user/c7ac5d98-f2b4-4c67-a5a5-8fd929645b8b.svg)](https://wakatime.com/@c7ac5d98-f2b4-4c67-a5a5-8fd929645b8b)
-![](https://komarev.com/ghpvc/?username=eiichi-worker)
+![Profile views](https://komarev.com/ghpvc/?username=eiichi-worker)
 
-
-🤗 こんにちは
----
+## 🤗 こんにちは
 
 WEB系が好きなエンジニア。  
 フルスタック/フルサイクルにものを作るよ。  
@@ -14,7 +11,7 @@ WEB系が好きなエンジニア。
 HRT(謙虚/敬意/信頼)の心を大事にアジャイルに働くよ。  
 設計/インフラ/開発環境/チームビルド/xxxマネジメント/情シスなどなど幅広く対応出来るよ。
 
-#### 【合同会社わしら】の代表兼エンジニアをしているよ。
+### 【合同会社わしら】の代表兼エンジニアをしているよ
 
 - コーポレートサイトだよ👇  
   - <https://washira.co>  
@@ -23,15 +20,14 @@ HRT(謙虚/敬意/信頼)の心を大事にアジャイルに働くよ。
 
 会社への依頼も個人への依頼も募集中だよ🧡
 
-
-#### 保護猫系ボランティアもしているよ🐱
+### 保護猫系ボランティアもしているよ🐱
 
 応援してね📣  
 \もあねこプロジェクト/  
 <https://lit.link/moreneko>  
 👆 SNS頑張り中 👆
 
-#### 😎 趣味・興味
+### 😎 趣味・興味
 
 - モダンな技術あさり
 - 自作PC、ガジェット
@@ -39,47 +35,41 @@ HRT(謙虚/敬意/信頼)の心を大事にアジャイルに働くよ。
 - 猫、水槽
 - アニメ
 
-
-🧑‍💻 職歴やスキルは職務経歴書にまとめてあるよ
----
+## 🧑‍💻 職歴やスキルは職務経歴書にまとめてあるよ
 
 - [📄 職務経歴書はこちら](./RESUME.md)
 
-📧 お仕事のご依頼
----
+## 📧 お仕事のご依頼
 
-#### 直接の場合はサイトのフォームよりご連絡ください
+### 直接の場合はサイトのフォームよりご連絡ください
 
 - [合同会社わしら](https://washira.co/)
 
-#### プラットフォーム経由の場合はこちら
+### プラットフォーム経由の場合はこちら
 
 - [クラウドワークス](https://crowdworks.jp/public/employees/4831032)
 - [ココナラ](https://coconala.com/users/3611835)
 
-🔍 利用サービス/プロフィールなど
----
+## 🔍 利用サービス/プロフィールなど
 
 - [Connpass](https://connpass.com/user/eiichi/)
-- [LAPRAS Profile](https://lapras.com/public/eiichi) 
+- [LAPRAS Profile](https://lapras.com/public/eiichi)
 
-🌏 SNS
----
+## 🌏 SNS
 
 - [Facebook](https://www.facebook.com/eiichi.fujimoto)
 - [LinkedIn](https://www.linkedin.com/in/eiichi-fujimoto)
 - [eight｜名刺](https://8card.net/virtual_cards/aTbPCzDpFnjX3D0zwY5rqQ)
 - [Note｜ブログ](https://note.com/eiichicat)
 
-📊 その他情報
----
+## 📊 その他情報
 
 <a href="https://github.com/anuraghazra/github-readme-stats">
-  <img align="left" src="https://github-readme-stats.vercel.app/api?username=eiichi-worker&count_private=true&show_icons=true" />
+  <img alt="GitHub stats" align="left" src="https://github-readme-stats.vercel.app/api?username=eiichi-worker&count_private=true&show_icons=true" />
 </a>
 
 <a href="https://github.com/anuraghazra/github-readme-stats">
-  <img align="left" src="https://github-readme-stats.vercel.app/api/top-langs/?username=eiichi-worker" />
+  <img alt="Top languages" align="left" src="https://github-readme-stats.vercel.app/api/top-langs/?username=eiichi-worker" />
 </a>
 
 <!--START_SECTION:lapras-card-->

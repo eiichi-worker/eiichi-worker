@@ -1,0 +1,11 @@
+{
+  "private": true,
+  "devDependencies": {
+    "markdownlint-cli2": "^0.18.1",
+    "textlint": "^15.2.0",
+    "textlint-filter-rule-comments": "^1.2.2",
+    "textlint-rule-preset-ja-spacing": "^2.4.3",
+    "textlint-rule-preset-ja-technical-writing": "^12.0.2",
+    "textlint-rule-preset-jtf-style": "^3.0.2"
+  }
+}

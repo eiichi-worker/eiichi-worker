@@ -1,0 +1,10 @@
+{
+  "globs": ["**/*.md"],
+  "ignores": ["node_modules", ".tmp"],
+  "config": {
+    "default": true,
+    "MD013": false, // 行長は日本語だと無意味
+    "MD033": false, // READMEのHTMLバッジ用
+    "MD041": false
+  }
+}

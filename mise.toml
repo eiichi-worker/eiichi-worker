@@ -1,0 +1,23 @@
+[tools]
+bun = "latest"
+python = "3.13"
+
+[tasks.install]
+run = "bun install"
+
+[tasks."lint:md"]
+description = "markdownlint"
+run = "bun run markdownlint-cli2"
+
+[tasks."lint:text"]
+description = "textlint (テキスト校正くん相当)"
+run = "bun run textlint ."
+
+[tasks.lint]
+depends = ["lint:md", "lint:text"]
+
+[tasks.fix]
+run = [
+  "bun run markdownlint-cli2 --fix",
+  "bun run textlint --fix .",
+]
