@@ -1,0 +1,448 @@
+:root {
+  --text: #1c2430;
+  --muted: #5f6b7a;
+  --accent: #1f4e79;
+  --accent-soft: #eaf1f8;
+  --line: #d3dbe5;
+  --tag-bg: #f3f6fa;
+  --tag-line: #ccd6e2;
+  --featured: #b3541e;
+  --featured-soft: #fdf1e8;
+  --disliked: #5b8fae;
+  --disliked-soft: #eaf6fc;
+  --disliked-line: #bfe0f1;
+  --page-bg: #e8ebef;
+  --sheet-bg: #fff;
+  --font: "BIZ UDPGothic", "BIZ UDPゴシック", "Hiragino Sans", "Noto Sans JP", "Meiryo", sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--page-bg);
+  color: var(--text);
+  font-family: var(--font);
+  font-size: 10pt;
+  line-height: 1.65;
+}
+
+a { color: inherit; text-decoration: none; border-bottom: 1px dotted var(--muted); }
+p { margin: 0; }
+h1, h2, h3, h4 { margin: 0; line-height: 1.35; }
+
+/* 画面表示：A4 の紙を模したシート */
+.sheet {
+  width: 210mm;
+  max-width: 100%;
+  margin: 24px auto;
+  padding: 16mm 16mm;
+  background: var(--sheet-bg);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, .15);
+}
+
+/* ---------- ヘッダー ---------- */
+.head {
+  padding-bottom: 10px;
+  border-bottom: 3px solid var(--accent);
+}
+.head-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 16px;
+}
+.doc-title { font-size: 9pt; color: var(--muted); letter-spacing: .3em; }
+h1 { font-size: 22pt; letter-spacing: .08em; }
+.name-en { font-size: 10pt; font-weight: normal; color: var(--muted); margin-left: 12px; letter-spacing: .05em; }
+.tagline { color: var(--accent); font-weight: bold; font-size: 9.5pt; margin-top: 2px; }
+.tagline-item { white-space: nowrap; }
+.tagline-sep { color: var(--muted); font-weight: normal; }
+.head-main { min-width: 0; }
+/* 日付や年齢は折り返さず、幅も縮めない */
+.head-meta { flex-shrink: 0; white-space: nowrap; align-self: flex-start; text-align: right; font-size: 9pt; color: var(--muted); line-height: 1.6; }
+
+/* ---------- セクション ---------- */
+.block { margin-top: 20px; }
+h2 {
+  font-size: 12.5pt;
+  color: var(--accent);
+  padding: 0 0 4px 10px;
+  border-left: 4px solid var(--accent);
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 10px;
+  break-after: avoid;
+  page-break-after: avoid;
+}
+.sub-title {
+  font-size: 10pt;
+  color: var(--accent);
+  margin: 12px 0 6px;
+  break-after: avoid;
+  page-break-after: avoid;
+}
+.note { font-size: 8.5pt; color: var(--muted); margin-top: 6px; }
+.muted { color: var(--muted); }
+
+/* ---------- プロフィール ---------- */
+.profile .motto {
+  font-size: 13pt;
+  font-weight: bold;
+  color: var(--accent);
+  margin-bottom: 6px;
+}
+.profile p + p { margin-top: 4px; }
+
+/* ---------- 強み ---------- */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+/* 4件のときは 3＋1 にならないよう 2×2 にする */
+.cards:has(> :nth-child(4):last-child) { grid-template-columns: repeat(2, 1fr); }
+.card {
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--accent);
+  border-radius: 4px;
+  padding: 8px 10px;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+.card h3 { font-size: 11pt; margin-bottom: 4px; }
+.card .evidence { margin-top: 6px; font-size: 8.5pt; color: var(--muted); }
+.evidence-label {
+  display: block;
+  font-weight: bold;
+  color: var(--accent);
+}
+
+/* ---------- 主な実績 ---------- */
+.highlights-list {
+  list-style: none;
+  counter-reset: hl;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px 16px;
+}
+.highlights-list li {
+  counter-increment: hl;
+  position: relative;
+  padding-left: 30px;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+.highlights-list li::before {
+  content: counter(hl);
+  position: absolute;
+  left: 0;
+  top: 1px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #fff;
+  font-weight: bold;
+  font-size: 9pt;
+  line-height: 22px;
+  text-align: center;
+}
+.highlights-list h3 { font-size: 10.5pt; }
+.highlights-list h3 a { border-bottom: none; }
+
+/* ---------- 推しの技術 ---------- */
+.featured { break-inside: avoid; page-break-inside: avoid; }
+.featured .tag { font-size: 9.5pt; padding: 1px 9px; }
+
+/* ---------- 職務経歴（タイムライン） ---------- */
+.company {
+  position: relative;
+  padding-left: 20px;
+  border-left: 2px solid var(--line);
+  margin-left: 6px;
+  padding-bottom: 6px;
+}
+.company + .company { margin-top: 4px; padding-top: 10px; }
+.company-head {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 8px;
+  break-after: avoid;
+  page-break-after: avoid;
+}
+.company-head::before {
+  content: "";
+  position: absolute;
+  left: -28px;
+  top: 4px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 2px solid var(--sheet-bg);
+}
+.company-head h3 { font-size: 11.5pt; }
+.position { font-size: 9pt; font-weight: normal; color: var(--muted); margin-left: 10px; }
+.company-period { font-size: 9pt; color: var(--accent); font-weight: bold; white-space: nowrap; }
+
+.project {
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 8px 12px;
+  margin-bottom: 8px;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+.project-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+}
+.project-head h4 { font-size: 10.5pt; }
+.project-period { font-size: 8.5pt; color: var(--muted); white-space: nowrap; }
+.roles { margin: 4px 0 6px; }
+.project-body {
+  display: grid;
+  grid-template-columns: 4.5em 1fr;
+  gap: 2px 8px;
+  margin: 0;
+}
+.project-body dt {
+  font-size: 8.5pt;
+  font-weight: bold;
+  color: var(--accent);
+  padding-top: 1px;
+}
+.project-body dd { margin: 0; }
+.project .tags { margin-top: 6px; }
+
+/* サブプロジェクトがある案件は長くなるので、案件の途中での改ページを許し、サブプロジェクト単位で切れないようにする */
+.project.has-subprojects { break-inside: auto; page-break-inside: auto; }
+.project.has-subprojects > .project-head,
+.project.has-subprojects > .roles,
+.project.has-subprojects > .project-body { break-inside: avoid; page-break-inside: avoid; }
+.subprojects { margin-top: 8px; }
+.subprojects-label {
+  font-size: 8.5pt;
+  font-weight: bold;
+  color: var(--accent);
+  margin-bottom: 4px;
+  break-after: avoid;
+  page-break-after: avoid;
+}
+.subproject {
+  border-left: 3px solid var(--accent-soft);
+  padding: 2px 0 2px 10px;
+  margin: 0 0 6px 2px;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+.subproject h5 { font-size: 10pt; margin: 0; }
+.subproject .roles { margin: 2px 0 4px; }
+.subproject .project-body { margin-top: 2px; }
+.subproject .tags { margin-top: 4px; }
+
+/* ---------- タグ ---------- */
+.tags { display: flex; flex-wrap: wrap; gap: 4px; }
+.tag, .role {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 4px;
+  font-size: 8.5pt;
+  line-height: 1.5;
+  padding: 0 7px;
+  border-radius: 3px;
+  white-space: nowrap;
+}
+.tag { background: var(--tag-bg); border: 1px solid var(--tag-line); }
+/* 推しの技術のタグ（白黒印刷でも区別できるよう太字＋濃い枠） */
+.tag-featured {
+  background: var(--featured-soft);
+  border-color: var(--featured);
+  color: var(--featured);
+  font-weight: bold;
+}
+.tag-featured .tag-sub { color: var(--featured); font-weight: normal; }
+/* 嫌いな技術（featured: false）。うっすら水色 */
+.tag-disliked { background: var(--disliked-soft); border-color: var(--disliked-line); color: var(--disliked); }
+.tag-disliked .tag-sub { color: var(--disliked); }
+/* いまは使っていない技術（終了時期あり）。白黒印刷でも分かるよう破線の枠にする */
+.tag-past { border-style: dashed; background: transparent; color: var(--muted); }
+.tag-featured.tag-past { color: var(--featured); }
+.tag-sub { font-size: 7.5pt; color: var(--muted); }
+.role {
+  background: var(--accent-soft);
+  color: var(--accent);
+  border: 1px solid var(--accent-soft);
+  margin-right: 4px;
+  font-weight: bold;
+}
+.role-scale { background: transparent; border-color: var(--accent); }
+
+/* ---------- スキル ---------- */
+.phase {
+  display: grid;
+  grid-template-columns: 7.5em 1fr;
+  gap: 8px;
+  padding: 6px 0;
+  border-bottom: 1px dashed var(--line);
+}
+.phase:not(:has(.phase-children)), .phase-child {
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+.phase:last-child { border-bottom: none; }
+.phase-name { font-size: 9.5pt; color: var(--accent); padding-top: 1px; }
+.phase-children { display: grid; gap: 5px; }
+.phase-child {
+  display: grid;
+  grid-template-columns: 9em 1fr;
+  gap: 8px;
+}
+.phase-child h4 { font-size: 9pt; font-weight: normal; color: var(--muted); padding-top: 1px; }
+
+.axes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+.axis {
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--accent);
+  border-radius: 4px;
+  padding: 6px 10px;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+.axis-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 4px; }
+.axis-head h4 { font-size: 10pt; }
+.axis-years { font-size: 10pt; font-weight: bold; color: var(--accent); }
+
+/* ---------- 資格・学歴 ---------- */
+.two-col { display: grid; grid-template-columns: 1fr 1.7fr; gap: 20px; }
+.two-col .sub-title { margin-top: 0; }
+/* 資格・学歴：年・期間の列（小さめ・薄め）と本文の列を、全行でそろえる。
+   各行は subgrid で列幅を共有し、文字の高さ（ベースライン）と行の下線をそろえる */
+ul.dated {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  column-gap: 12px;
+}
+ul.dated li {
+  display: grid;
+  grid-column: 1 / -1;
+  grid-template-columns: subgrid;
+  align-items: baseline;
+  padding: 3px 0;
+  border-bottom: 1px dotted var(--line);
+}
+.dated-when { font-size: 8.5pt; color: var(--muted); white-space: nowrap; }
+
+/* 付録：URL */
+.link-list {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 3px 16px;
+  margin: 0;
+}
+.link-list dt { font-weight: bold; }
+.link-list dd { margin: 0; overflow-wrap: anywhere; }
+
+/* 末尾の注釈 */
+.footnotes {
+  list-style: none;
+  margin: 20px 0 0;
+  padding: 8px 0 0;
+  border-top: 1px solid var(--line);
+  font-size: 8.5pt;
+  color: var(--muted);
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+.footnotes li { display: grid; grid-template-columns: max-content 1fr; gap: 6px; }
+.footnotes li + li { margin-top: 2px; }
+.footnote-label { white-space: nowrap; }
+/* 本文中の注釈番号（※1） */
+.note-ref { font-size: 65%; line-height: 0; margin: 0 1px; }
+.note-ref a { border-bottom: none; color: var(--accent); }
+
+/* 個人情報の取り扱いについての記載 */
+.privacy {
+  margin-top: 14px;
+  padding: 6px 10px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  font-size: 8.5pt;
+  color: var(--muted);
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+.end { text-align: right; margin-top: 18px; }
+.error { color: #b00020; white-space: pre-wrap; }
+
+/* ---------- ツールバー（画面のみ） ---------- */
+.toolbar {
+  width: 210mm;
+  max-width: 100%;
+  margin: 16px auto -8px;
+  text-align: right;
+}
+.toolbar button {
+  font: inherit;
+  padding: 6px 14px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: var(--sheet-bg);
+  color: var(--text);
+  cursor: pointer;
+}
+.toolbar .hint { color: var(--muted); font-size: 9pt; margin-right: 8px; }
+
+/* ---------- 狭い画面（印刷時の A4 幅も 760px 未満なので screen に限定する） ---------- */
+@media screen and (max-width: 760px) {
+  .sheet { margin: 0; padding: 16px; box-shadow: none; }
+  .toolbar { display: none; }
+  .head-row { flex-direction: column; align-items: flex-start; }
+  .head-meta { text-align: left; }
+  .cards, .highlights-list, .axes, .two-col { grid-template-columns: 1fr; }
+  .phase, .phase-child { grid-template-columns: 1fr; gap: 2px; }
+  .project-head, .company-head { flex-direction: column; gap: 0; }
+  .tag, .role { white-space: normal; }
+}
+
+/* ---------- 印刷（A4 縦） ---------- */
+/* 余白領域にページ番号を出すと、ブラウザ既定のヘッダー/フッター（URL・日付）は表示されない */
+@page {
+  size: A4 portrait;
+  margin: 12mm 13mm 14mm;
+  @bottom-center {
+    content: counter(page) " / " counter(pages);
+    font-family: "BIZ UDPGothic", "BIZ UDPゴシック", "Hiragino Sans", "Noto Sans JP", sans-serif;
+    font-size: 8pt;
+    color: #5f6b7a;
+  }
+  /* 上端にも（見えない）内容を置き、ブラウザ既定のヘッダー（日付・タイトル）を抑止する */
+  @top-center { content: "\00a0"; }
+}
+
+@media print {
+  body { background: #fff; font-size: 9pt; }
+  .toolbar { display: none; }
+  .sheet { width: auto; margin: 0; padding: 0; box-shadow: none; }
+  a { border-bottom: none; }
+  p, li, dd { orphans: 2; widows: 2; }
+  * {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}

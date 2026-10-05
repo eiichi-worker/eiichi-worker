@@ -5,3 +5,7 @@ node = "lts"
 bun = "latest"
 gh = "latest"
 jq = "latest"
+
+[tasks.pdf]
+description = "職務経歴書（RESUME_HTML）を A4 の PDF にして .local/ に出力する"
+run = "pwsh -NoProfile -ExecutionPolicy Bypass -File RESUME_HTML/make-pdf.ps1"
