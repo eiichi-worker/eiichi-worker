@@ -1,3 +1,16 @@
+/* Noto Sans JP は、可変フォント版を使うと PDF に図形（Type3）として入り、文字のコピーや検索が崩れる。
+   そのため、通常版（標準・太字）を fonts/ から読み込む。fonts/ は Git 管理外で、make-pdf.ps1 が作る */
+@font-face {
+  font-family: "Noto Sans JP";
+  font-weight: 400;
+  src: url("fonts/NotoSansJP-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Noto Sans JP";
+  font-weight: 700;
+  src: url("fonts/NotoSansJP-Bold.ttf") format("truetype");
+}
+
 :root {
   --text: #1c2430;
   --muted: #5f6b7a;
@@ -13,7 +26,7 @@
   --disliked-line: #bfe0f1;
   --page-bg: #e8ebef;
   --sheet-bg: #fff;
-  --font: "BIZ UDPGothic", "BIZ UDPゴシック", "Hiragino Sans", "Noto Sans JP", "Meiryo", sans-serif;
+  --font: "Noto Sans JP", "Hiragino Sans", "BIZ UDPGothic", "Meiryo", sans-serif;
 }
 
 * { box-sizing: border-box; }
@@ -94,13 +107,12 @@ h2 {
 .profile p + p { margin-top: 4px; }
 
 /* ---------- 強み ---------- */
+/* 1件ずつ縦に並べる */
 .cards {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
+  grid-template-columns: 1fr;
+  gap: 8px;
 }
-/* 4件のときは 3＋1 にならないよう 2×2 にする */
-.cards:has(> :nth-child(4):last-child) { grid-template-columns: repeat(2, 1fr); }
 .card {
   border: 1px solid var(--line);
   border-top: 3px solid var(--accent);
@@ -118,6 +130,8 @@ h2 {
 }
 
 /* ---------- 主な実績 ---------- */
+/* 見出しと4件をページの途中で分けない */
+.highlights { break-inside: avoid; page-break-inside: avoid; }
 .highlights-list {
   list-style: none;
   counter-reset: hl;
@@ -222,11 +236,9 @@ h2 {
 .project-body dd { margin: 0; }
 .project .tags { margin-top: 6px; }
 
-/* サブプロジェクトがある案件は長くなるので、案件の途中での改ページを許し、サブプロジェクト単位で切れないようにする */
-.project.has-subprojects { break-inside: auto; page-break-inside: auto; }
-.project.has-subprojects > .project-head,
-.project.has-subprojects > .roles,
-.project.has-subprojects > .project-body { break-inside: avoid; page-break-inside: avoid; }
+/* 案件はページをまたがないようにする。1ページに収まらない長さのときだけ、
+   見出しから技術タグまで（.project-main）と、サブプロジェクトの単位で切る */
+.project-main { break-inside: avoid; page-break-inside: avoid; }
 .subprojects { margin-top: 8px; }
 .subprojects-label {
   font-size: 8.5pt;
@@ -427,7 +439,7 @@ ul.dated li {
   margin: 12mm 13mm 14mm;
   @bottom-center {
     content: counter(page) " / " counter(pages);
-    font-family: "BIZ UDPGothic", "BIZ UDPゴシック", "Hiragino Sans", "Noto Sans JP", sans-serif;
+    font-family: "Noto Sans JP", "Hiragino Sans", "BIZ UDPGothic", "Meiryo", sans-serif;
     font-size: 8pt;
     color: #5f6b7a;
   }

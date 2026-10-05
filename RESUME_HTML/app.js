@@ -44,6 +44,24 @@ function stripJsonc(text) {
 
 class DataError extends Error {}
 
+// 匿名版：URL に ?masked が付いていれば、resume.jsonc の masked の設定で氏名や会社名を置き換える
+const MASKED = new URLSearchParams(location.search).has("masked");
+
+function applyMask(d) {
+  const { replace = [], hide = [], set = {}, ageRange = false } = d.masked ?? {};
+  const mask = (v) => {
+    if (typeof v === "string") return replace.reduce((s, r) => s.replaceAll(r.from, r.to), v);
+    if (Array.isArray(v)) return v.map(mask);
+    if (v && typeof v === "object") return Object.fromEntries(Object.entries(v).map(([k, x]) => [k, mask(x)]));
+    return v;
+  };
+  const out = mask(d);
+  for (const key of hide) out[key] = null;
+  Object.assign(out, set);
+  out.ageRange = ageRange;
+  return out;
+}
+
 function parseJsonc(text) {
   const json = stripJsonc(text);
   try {
@@ -96,6 +114,12 @@ function ageAt(birthday, baseIso) {
   const [by, bm, bd] = birthday.split("-").map(Number);
   const [y, m, d] = baseIso.split("-").map(Number);
   return y - by - (m < bm || (m === bm && d < bd) ? 1 : 0);
+}
+
+// 年齢を「37歳」、または年代の「30代後半」の形にする
+function ageLabel(age, range) {
+  if (!range) return `${age}歳`;
+  return `${Math.floor(age / 10) * 10}代${age % 10 < 5 ? "前半" : "後半"}`;
 }
 
 // "2014-05" から終了時期（なければ基準日）までの経験年数を「12年」の形で返す
@@ -211,8 +235,8 @@ function renderHeader(d) {
       ),
       el("div", { class: "head-meta" },
         d.updatedAt ? el("p", {}, formatDate(d.updatedAt)) : null,
-        // 年齢と居住地は「37歳 / 大阪府」のように1行にまとめる（どちらかが null なら片方だけ）
-        el("p", {}, [d.birthday && d.updatedAt ? `${ageAt(d.birthday, d.updatedAt)}歳` : null, d.location]
+        // 年齢と居住地は「37歳 / 大阪府」のように1行にまとめる（どちらかが null なら片方だけ）。匿名版は「30代後半 / 関西」
+        el("p", {}, [d.birthday && d.updatedAt ? ageLabel(ageAt(d.birthday, d.updatedAt), d.ageRange) : null, d.location]
           .filter(Boolean).join(" / ")),
       ),
     ),
@@ -294,17 +318,20 @@ function renderSubproject(s) {
 function renderProject(p, id) {
   const subs = p.subprojects ?? [];
   return el("article", { class: subs.length ? "project has-subprojects" : "project", id },
-    el("div", { class: "project-head" },
-      el("h4", {}, p.title),
-      el("p", { class: "project-period" }, `${p.period.from} 〜 ${p.period.to}`),
+    // 見出しから技術タグまでは、ページの途中で切らない
+    el("div", { class: "project-main" },
+      el("div", { class: "project-head" },
+        el("h4", {}, p.title),
+        el("p", { class: "project-period" }, `${p.period.from} 〜 ${p.period.to}`),
+      ),
+      p.roles?.length || p.scale
+        ? el("p", { class: "roles" },
+          (p.roles ?? []).map((r) => tag(r, null, "role")),
+          p.scale ? tag(p.scale, null, "role role-scale") : null)
+        : null,
+      bodyRows(p),
+      p.tech?.length ? el("p", { class: "tags" }, p.tech.map((t) => tag(t))) : null,
     ),
-    p.roles?.length || p.scale
-      ? el("p", { class: "roles" },
-        (p.roles ?? []).map((r) => tag(r, null, "role")),
-        p.scale ? tag(p.scale, null, "role role-scale") : null)
-      : null,
-    bodyRows(p),
-    p.tech?.length ? el("p", { class: "tags" }, p.tech.map((t) => tag(t))) : null,
     subs.length
       ? el("div", { class: "subprojects" },
         el("p", { class: "subprojects-label" }, "この案件での主な取り組み"),
@@ -347,7 +374,7 @@ function renderSkills(s, base) {
   return section("skills", "スキル",
     el("h3", { class: "sub-title" }, "工程別"),
     phases,
-    el("h3", { class: "sub-title" }, "役割の軸"),
+    el("h3", { class: "sub-title" }, "役割別"),
     axes,
     s.note ? el("p", { class: "note" }, `※${s.note}`) : null,
   );
@@ -443,7 +470,12 @@ fetch(DATA_URL)
     return res.text();
   })
   .then((text) => {
-    render(parseJsonc(text));
+    const data = parseJsonc(text);
+    render(MASKED ? applyMask(data) : data);
+    // フォントを読み込み終えてから、描画完了とする（make-pdf.ps1 はこれを待って印刷する）
+    return document.fonts.ready;
+  })
+  .then(() => {
     document.documentElement.dataset.state = "ready";
   })
   .catch((err) => {
